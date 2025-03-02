@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Jomari's Blog{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h1>Welcome to My Personal Blog</h1>
+        <p>Hi! I'm Jomari Bhaya, a passionate individual with diverse interests and hobbies. Join me as I share my experiences and journey through life.</p>
+    </div>
+
+    <div class="card">
+        <h2>My Interests</h2>
+        <ul>
+            <li><strong>Photography:</strong> I enjoy capturing moments and experimenting with different angles and lighting.</li>
+            <li><strong>Manga & Manhwa:</strong> I love reading manga and manhwa online, immersing myself in various stories and art styles.</li>
+            <li><strong>Anime:</strong> Watching anime is a passion of mine, as it allows me to explore different genres, characters, and cultural perspectives.</li>
+            <li><strong>Sleep:</strong> While it may sound simple, I truly appreciate the comfort and relaxation it provides, especially after a long day.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li><strong>Basketball:</strong> One of my favorite sports that keeps me active and allows me to bond with friends.</li>
+            <li><strong>Mobile Gaming:</strong> I enjoy playing mobile games as a fun escape and way to challenge myself.</li>
+            <li><strong>Socializing:</strong> I value spending time with friends and hanging out whenever possible.</li>
+            <li><strong>Thrift Shopping (Ukay-ukay):</strong> I used to hunt for unique and affordable fashion pieces.</li>
+            <li><strong>Coffee Shop Hopping:</strong> I love visiting different coffee shops to try iced coffee, experiencing each place's distinct vibe and flavors.</li>
+            <li><strong>Drawing:</strong> I used to draw, which allowed me to express creativity through sketches and illustrations.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Achievements</h2>
+        <ul>
+            <li><strong>Academic Excellence:</strong> Top student during elementary and high school years.</li>
+            <li><strong>Mathematics:</strong> Won various math contests, strengthening my problem-solving skills.</li>
+            <li><strong>Creative Arts:</strong> Won several slogan and poster-making competitions.</li>
+            <li><strong>Church Leadership:</strong> Served as a sacristan and took on youth leadership responsibilities.</li>
+            <li><strong>Rover Scout:</strong> Member of the Rover Scout of the Philippines, developing discipline, teamwork, and leadership skills.</li>
+        </ul>
+    </div>
+
+    <style>
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .card li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .card strong {
+            color: #4a5568;
+        }
+    </style>
+{% endblock %}

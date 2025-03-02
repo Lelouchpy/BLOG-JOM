@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title if post else "Post Not Found" }} | Jomari's Blog{% endblock %}
+
+{% block content %}
+    <div class="card">
+        {% if post %}
+            <span class="category-tag">{{ post.get('category', 'Uncategorized') }}</span>
+            <h1>{{ post.title }}</h1>
+            <p class="post-meta">Posted on {{ post.date.strftime('%B %d, %Y') }}</p>
+            <img src="{{ url_for('serve_image', filename=post.image) }}" alt="{{ post.title }}" class="post-image">
+            <p>{{ post.content }}</p>
+        {% else %}
+            <h1>Post Not Found</h1>
+            <p>Sorry, the requested post could not be found.</p>
+            <a href="{{ url_for('blog') }}">Back to Blog</a>
+        {% endif %}
+    </div>
+
+    <style>
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card h1 {
+            margin-top: 1rem;
+        }
+    </style>
+{% endblock %}
